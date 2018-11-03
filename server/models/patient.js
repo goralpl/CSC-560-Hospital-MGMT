@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+    const mongoose = require('mongoose');
 const _ = require('lodash');
 var {scoreOfDisease, Disease} = require('./diseases.js');
 var rooms = require('./rooms.js');
