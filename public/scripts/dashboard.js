@@ -6,6 +6,13 @@ var freeRoomsTableConstructor = [];
 var dynamicTableClickable = true;
 
 $(document).ready(function() {
+
+var old = alert;
+
+alert = function() {
+  console.log(new Error().stack);
+  old.apply(window, arguments);
+};
   var patientsAPI = URL + "/app/getpatients";
   $.getJSON(patientsAPI).done(function(patients) {
 	  var roomsAPI = URL + "/app/getrooms";
