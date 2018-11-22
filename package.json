@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node app.js"
   },
   "engines": {
-     "node": "6.9.1"
+    "node": "6.9.1"
   },
   "author": "",
   "license": "ISC",
@@ -25,17 +25,16 @@
     "hbs": "^4.0.1",
     "is-valid-date": "0.0.1",
     "lodash": "^4.17.4",
+    "mocha": "^5.2.0",
     "mongodb": "^2.2.24",
     "mongoose": "^4.8.5",
     "passport": "^0.3.2",
     "passport-http": "^0.3.0",
     "passport-local": "^1.0.0",
-    "serve-favicon": "^2.4.1"
+    "serve-favicon": "^2.4.1",
+    "should": "^13.2.3"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
-  },
-  "engines": {
-    "node": "6.9.1"
   }
 }

@@ -22,6 +22,8 @@ router.post('/app/adduser', (req, res) => {
 
     // if there are errors, flash messages on the screen
     var errors = req.validationErrors();
+
+
     if(errors) {
         res.status(400).redirect('systemsettings');
     } else {

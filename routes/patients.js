@@ -30,6 +30,8 @@ router.get('/app/addpatient', (req, res) => {
     POST /addPatient -> add new patient
 */
 router.post('/app/addpatient', (req, res) => {
+
+    console.log(req)
     // receive the diseases from the form in the array PD, each element being a String with the disease name
     var PD = req.body.PD;
     var dateOfBirth = req.body.dateOfBirth;

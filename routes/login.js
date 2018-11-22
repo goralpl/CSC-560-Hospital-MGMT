@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 });
 
 /*
-    POST /login -> authentificate the user
+    POST /login -> authenticate the user
 */
 router.post('/login',
     passport.authenticate('local', {
@@ -35,9 +35,16 @@ router.post('/login',
 );
 
 
-// the Middleware for authetification -> provided by the passport library
-passport.use(new LocalStrategy(
+// the Middleware for authentication -> provided by the passport library
+
+x = passport.use(new LocalStrategy(
+
   function(username, password, done) {
+
+      console.log(username)
+      console.log(password)
+
+      /*Lookup the username, if it exists compare the password*/
       User.getUserByUsername(username, function(err, user) {
           if (err) {
               throw err;
@@ -58,7 +65,11 @@ passport.use(new LocalStrategy(
               }
           });
       });
+
+
   }));
+
+
 
 passport.serializeUser(function(user, done) {
     done(null, user.id);
