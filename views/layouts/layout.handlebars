@@ -87,9 +87,11 @@
                         <li>
                             <a href="/app/addpatient" class="active"><i class="fa fa-ambulance fa-fw"></i>  Add patient</a>
                         </li>
+			{{#if isAdmin}}	
                         <li>
                             <a href="/app/systemsettings" class="active"><i class="fa fa-dashboard fa-fw"></i>    System settings</a>
                         </li>
+			{{/if}}
                     </ul>
                 </div>
             </div>

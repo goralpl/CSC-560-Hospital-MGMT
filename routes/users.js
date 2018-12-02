@@ -15,6 +15,7 @@ const User = require('./../server/models/user.js');
 router.post('/app/adduser', (req, res) => {
 	var username = req.body.username;
 	var password = req.body.password;
+	var role = req.body.role;
 
     // validation
 	req.checkBody('username', 'Username is required').notEmpty();
@@ -30,9 +31,9 @@ router.post('/app/adduser', (req, res) => {
         // if everything is OK, create a new user in the database
         var newUser = new User({
             username,
-            password
+            password,
+	    admin: role
         });
-
         User.createUser(newUser, function(err, user) {
             if (err) {
 				console.log(err);

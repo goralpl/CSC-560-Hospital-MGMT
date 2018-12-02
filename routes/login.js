@@ -1,7 +1,6 @@
 /*
     POST /login -> authentificate in the system
     GET /       -> get to the login page
-
     The functions passport.use, passport.serializeUser, passport.deserializeUser are taken from the
     official documentation http://www.passportjs.org/docs and adapted to the User model of this system
 */
